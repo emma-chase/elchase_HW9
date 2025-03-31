@@ -4,9 +4,87 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Page 2</title>
   </head>
   <body>
     <h1>Business Analytics Student Survey</h1>
+    <form action="elchase_ty.html" method="POST" id="baisForm">
+    
+    <p>I am finishing my</p>
+    <label for="First year" >
+        <input type="radio" id="first year" name="year" value="first year" required> First year at Iowa
+    </label>
+
+    <label for="Second year">
+        <input type="radio" id="second year" name="year" value="second year" required> Second year at Iowa
+    </label>
+
+    <label for="Third year">
+        <input type="radio" id="third year" name="year" value="third year" required> Third year at Iowa
+    </label>
+
+    <label for="Fourth year">
+        <input type="radio" id="fourth year" name="year" value="fourth year" required> Fourth year at Iowa
+    </label>   
+
+        <p>
+            <fieldset>
+                <legend>BAIS Core Classes I Have Completed</legend>
+                
+                <label for="Information Systems">
+                    <input type="checkbox" id="Information Systems" name="activities" value="Information Systems"> Information Systems
+                </label>    
+
+                <label for="Operations">
+                    <input type="checkbox" id="Operations" name="activities" value="Operations"> Operations
+                </label>
+
+                <label for="Foundations of Business Analytics">
+                    <input type="checkbox" id="Foundations of Business Analytics" name="activities" value="Foundations of Business Analytics"> Foundations of Business Analytics
+                </label>
+
+                <label for="Computational Thinking">
+                    <input type="checkbox" id="Computational Thinking" name="activities" value="Computational Thinking"> Computational Thinking
+                </label>
+
+                <label for="Database Management">
+                    <input type="checkbox" id="Database Management" name="activities" value="Database Management"> Database Management
+                </label>
+
+                <label for="Data Wrangling">
+                    <input type="checkbox" id="Data Wrangling" name="activities" value="Data Wrangling"> Data Wrangling
+                </label>
+
+                <label for="Data Mining">
+                    <input type="checkbox" id="Data Mining" name="activities" value="Data Mining"> Data Mining
+                </label>
+
+                <label for="BAIS Capstone">
+                    <input type="checkbox" id="BAIS Capstone" name="activities" value="BAIS Capstone"> BAIS Capstone
+                </label>
+                
+                <!-- Custom validation message -->
+                <div id="error-message" style="color: red; display: none;">Please select at least one option.</div>
+            </fieldset>
+        </p>
+
+        <input type="submit" value="Finish">
+
+        <footer>Page 2 of 2</footer>
+
+    </form>
+
+    <script>
+        // Form validation on submit
+        document.getElementById('baisForm').addEventListener('submit', function(event) {
+            var checkboxes = document.querySelectorAll('input[name="activities"]:checked');
+            if (checkboxes.length === 0) {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById('error-message').style.display = 'block'; // Show error message
+            } else {
+                document.getElementById('error-message').style.display = 'none'; // Hide error message
+            }
+        });
+    </script>
   </body>
 </html>
