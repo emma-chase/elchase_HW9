@@ -5,85 +5,224 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Business Analytics Student Survey</h1>
-    <form action="elchase_ty.html" method="POST" id="baisForm">
-    
-    <p>I am finishing my</p>
-    <label for="First year" >
-        <input type="radio" id="first year" name="year" value="first year" required> First year at Iowa
-    </label>
+    <div class="container mt-5">
+      <!-- Header Section -->
+      <div class="text-center mb-4">
+        <h1 class="display-4">Business Analytics Student Survey</h1>
+      </div>
 
-    <label for="Second year">
-        <input type="radio" id="second year" name="year" value="second year" required> Second year at Iowa
-    </label>
+      <form action="elchase_ty.html" method="POST" id="baisForm">
+        <div class="mb-4">
+          <p>I am finishing my</p>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="firstYear"
+              name="year"
+              value="first year"
+              class="form-check-input"
+              required
+            />
+            <label for="firstYear" class="form-check-label"
+              >First year at Iowa</label
+            >
+          </div>
 
-    <label for="Third year">
-        <input type="radio" id="third year" name="year" value="third year" required> Third year at Iowa
-    </label>
+          <div class="form-check">
+            <input
+              type="radio"
+              id="secondYear"
+              name="year"
+              value="second year"
+              class="form-check-input"
+              required
+            />
+            <label for="secondYear" class="form-check-label"
+              >Second year at Iowa</label
+            >
+          </div>
 
-    <label for="Fourth year">
-        <input type="radio" id="fourth year" name="year" value="fourth year" required> Fourth year at Iowa
-    </label>   
+          <div class="form-check">
+            <input
+              type="radio"
+              id="thirdYear"
+              name="year"
+              value="third year"
+              class="form-check-input"
+              required
+            />
+            <label for="thirdYear" class="form-check-label"
+              >Third year at Iowa</label
+            >
+          </div>
 
-        <p>
-            <fieldset>
-                <legend>BAIS Core Classes I Have Completed</legend>
-                
-                <label for="Information Systems">
-                    <input type="checkbox" id="Information Systems" name="activities" value="Information Systems"> Information Systems
-                </label>    
+          <div class="form-check">
+            <input
+              type="radio"
+              id="fourthYear"
+              name="year"
+              value="fourth year"
+              class="form-check-input"
+              required
+            />
+            <label for="fourthYear" class="form-check-label"
+              >Fourth year at Iowa</label
+            >
+          </div>
+        </div>
 
-                <label for="Operations">
-                    <input type="checkbox" id="Operations" name="activities" value="Operations"> Operations
-                </label>
+        <div class="mb-4">
+          <fieldset>
+            <legend class="fw-bold">BAIS Core Classes I Have Completed</legend>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="informationSystems"
+                name="activities"
+                value="Information Systems"
+                class="form-check-input"
+              />
+              <label for="informationSystems" class="form-check-label"
+                >Information Systems</label
+              >
+            </div>
 
-                <label for="Foundations of Business Analytics">
-                    <input type="checkbox" id="Foundations of Business Analytics" name="activities" value="Foundations of Business Analytics"> Foundations of Business Analytics
-                </label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="operations"
+                name="activities"
+                value="Operations"
+                class="form-check-input"
+              />
+              <label for="operations" class="form-check-label"
+                >Operations</label
+              >
+            </div>
 
-                <label for="Computational Thinking">
-                    <input type="checkbox" id="Computational Thinking" name="activities" value="Computational Thinking"> Computational Thinking
-                </label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="foundations"
+                name="activities"
+                value="Foundations of Business Analytics"
+                class="form-check-input"
+              />
+              <label for="foundations" class="form-check-label"
+                >Foundations of Business Analytics</label
+              >
+            </div>
 
-                <label for="Database Management">
-                    <input type="checkbox" id="Database Management" name="activities" value="Database Management"> Database Management
-                </label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="computationalThinking"
+                name="activities"
+                value="Computational Thinking"
+                class="form-check-input"
+              />
+              <label for="computationalThinking" class="form-check-label"
+                >Computational Thinking</label
+              >
+            </div>
 
-                <label for="Data Wrangling">
-                    <input type="checkbox" id="Data Wrangling" name="activities" value="Data Wrangling"> Data Wrangling
-                </label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="databaseManagement"
+                name="activities"
+                value="Database Management"
+                class="form-check-input"
+              />
+              <label for="databaseManagement" class="form-check-label"
+                >Database Management</label
+              >
+            </div>
 
-                <label for="Data Mining">
-                    <input type="checkbox" id="Data Mining" name="activities" value="Data Mining"> Data Mining
-                </label>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="dataWrangling"
+                name="activities"
+                value="Data Wrangling"
+                class="form-check-input"
+              />
+              <label for="dataWrangling" class="form-check-label"
+                >Data Wrangling</label
+              >
+            </div>
 
-                <label for="BAIS Capstone">
-                    <input type="checkbox" id="BAIS Capstone" name="activities" value="BAIS Capstone"> BAIS Capstone
-                </label>
-                
-                <!-- Custom validation message -->
-                <div id="error-message" style="color: red; display: none;">Please select at least one option.</div>
-            </fieldset>
-        </p>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="dataMining"
+                name="activities"
+                value="Data Mining"
+                class="form-check-input"
+              />
+              <label for="dataMining" class="form-check-label"
+                >Data Mining</label
+              >
+            </div>
 
-        <input type="submit" value="Finish">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="baisCapstone"
+                name="activities"
+                value="BAIS Capstone"
+                class="form-check-input"
+              />
+              <label for="baisCapstone" class="form-check-label"
+                >BAIS Capstone</label
+              >
+            </div>
 
-        <footer>Page 2 of 2</footer>
+            <!-- Custom validation message -->
+            <div
+              id="error-message"
+              class="text-danger mt-2"
+              style="display: none"
+            >
+              Please select at least one option.
+            </div>
+          </fieldset>
+        </div>
 
-    </form>
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Finish</button>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="text-center mt-4">
+          <small>Page 2 of 2</small>
+        </footer>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Form validation on submit
-        document.getElementById('baisForm').addEventListener('submit', function(event) {
-            var checkboxes = document.querySelectorAll('input[name="activities"]:checked');
-            if (checkboxes.length === 0) {
-                event.preventDefault(); // Prevent form submission
-                document.getElementById('error-message').style.display = 'block'; // Show error message
-            } else {
-                document.getElementById('error-message').style.display = 'none'; // Hide error message
-            }
+      document
+        .getElementById("baisForm")
+        .addEventListener("submit", function (event) {
+          var checkboxes = document.querySelectorAll(
+            'input[name="activities"]:checked'
+          );
+          if (checkboxes.length === 0) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("error-message").style.display = "block"; // Show error message
+          } else {
+            document.getElementById("error-message").style.display = "none"; // Hide error message
+          }
         });
     </script>
   </body>

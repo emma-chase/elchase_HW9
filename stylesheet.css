@@ -1,0 +1,74 @@
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333333;
+  color: #f8f8f8;
+  font-size: 1.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px; /* Centers the tooltip */
+}
+
+/* Show the tooltip when hovering over the container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.fontawesome {
+  font-size: 1.15rem;
+  color: #333333;
+}
+
+img {
+  width: 50%; /* Set image width to 100% of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow around the image */
+  margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Tooltip container */
+.info {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text styling */
+.info .infotext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333333;
+  color: #f8f8f8;
+  font-size: 1.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+/* Show the tooltip text on hover */
+.info:hover .infotext {
+  visibility: visible;
+}
