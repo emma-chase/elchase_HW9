@@ -8,4 +8,5 @@ This form was created with best practices in mind throughout. The form begins wi
 In general, I utilized bootstrap throughout each page. Utilizing the same styling platform allows the form to look uniform and cohesive. I also worked to make sure the text was appropriately sized and spaced out. 
 
 Accessibility
+
 This web page is compliant with WCAG, as it passes the WAVE accessibility tool test. I made sure to keep accessibility at the forefront of my mind while making this form. The image at the end has alternative text so if someone is blind, it will be read to them. Additionally, the form doesn't rely on sensory characteristics to complete. The primary colors of the form are blue and black which are good colors to use in the case of color blind users. 
