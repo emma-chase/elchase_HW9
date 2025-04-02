@@ -19,7 +19,7 @@
       </div>
 
       <!-- Survey Form -->
-      <form id="baisForm">
+      <div>
         <div class="mb-4">
           <p>I am finishing my</p>
           <div class="form-check">
@@ -185,6 +185,7 @@
                 >BAIS Capstone</label
               >
             </div>
+
             <!-- Custom validation message -->
             <div
               id="error-message"
@@ -196,10 +197,17 @@
           </fieldset>
         </div>
 
+        <!-- Redirect Button -->
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary btn-lg">Finish</button>
+          <button
+            type="button"
+            onclick="window.location.href='elchase_ty.html';"
+            class="btn btn-primary btn-lg"
+          >
+            Finish
+          </button>
         </div>
-      </form>
+      </div>
 
       <!-- Footer Section -->
       <footer class="text-center mt-4">
@@ -213,30 +221,15 @@
       document
         .getElementById("baisForm")
         .addEventListener("submit", function (event) {
-          // Validate radio buttons (year selection)
-          var radioButtons = document.querySelectorAll(
-            'input[name="year"]:checked'
-          );
-          if (radioButtons.length === 0) {
-            alert("Please select your year.");
-            event.preventDefault();
-            return;
-          }
-
-          // Validate checkboxes (BAIS Core Classes)
           var checkboxes = document.querySelectorAll(
             'input[name="activities"]:checked'
           );
           if (checkboxes.length === 0) {
-            document.getElementById("error-message").style.display = "block"; // Show error message
             event.preventDefault(); // Prevent form submission
-            return;
+            document.getElementById("error-message").style.display = "block"; // Show error message
           } else {
             document.getElementById("error-message").style.display = "none"; // Hide error message
           }
-
-          // If validation passes, allow form submission and redirect
-          window.location.href = "elchase_ty.html"; // Redirect to next page
         });
     </script>
   </body>
