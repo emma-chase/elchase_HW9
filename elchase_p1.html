@@ -21,7 +21,7 @@
       <h1 class="text-center mb-4">Business Analytics Student Survey</h1>
 
       <!-- Survey Form -->
-      <div>
+      <form action="elchase_p2.html" method="post">
         <!-- Home Country Input -->
         <div class="mb-3">
           <label for="homeCountry" class="form-label">My home country is</label>
@@ -32,6 +32,7 @@
             class="form-control"
             placeholder="Enter your home country"
             autofocus
+            required
           />
         </div>
 
@@ -59,7 +60,7 @@
         <!-- State Selection Dropdown -->
         <div class="mb-3">
           <label for="states" class="form-label">Select a state</label>
-          <select name="states" id="states" class="form-select">
+          <select name="states" id="states" class="form-select" required>
             <option value="">-- choose state/territory --</option>
             <option value="AL">AL</option>
             <option value="AK">AK</option>
@@ -140,20 +141,14 @@
 
         <!-- Redirect Button -->
         <div class="mb-3">
-          <button
-            type="button"
-            onclick="window.location.href='elchase_p2.html';"
-            class="btn btn-primary w-100"
-          >
-            Next
-          </button>
+          <button type="submit" class="btn btn-primary w-100">Next</button>
         </div>
 
         <!-- Footer -->
         <footer class="text-center mt-4">
           <small>Page 2 of 2</small>
         </footer>
-      </div>
+      </form>
     </div>
   </body>
 </html>
