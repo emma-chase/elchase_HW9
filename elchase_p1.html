@@ -21,7 +21,7 @@
       <h1 class="text-center mb-4">Business Analytics Student Survey</h1>
 
       <!-- Survey Form -->
-      <form action="elchase_p2.html" method="post">
+      <form id="surveyForm">
         <!-- Home Country Input -->
         <div class="mb-3">
           <label for="homeCountry" class="form-label">My home country is</label>
@@ -141,7 +141,13 @@
 
         <!-- Redirect Button -->
         <div class="mb-3">
-          <button type="submit" class="btn btn-primary w-100">Next</button>
+          <button
+            type="button"
+            onclick="validateForm()"
+            class="btn btn-primary w-100"
+          >
+            Next
+          </button>
         </div>
 
         <!-- Footer -->
@@ -150,5 +156,21 @@
         </footer>
       </form>
     </div>
+
+    <script>
+      // Function to validate the form and navigate to the next page
+      function validateForm() {
+        const form = document.getElementById("surveyForm");
+
+        // Check if all required fields are filled
+        if (form.checkValidity()) {
+          // If form is valid, redirect to the next page
+          window.location.href = "elchase_p2.html";
+        } else {
+          // If form is not valid, trigger validation
+          form.reportValidity();
+        }
+      }
+    </script>
   </body>
 </html>
